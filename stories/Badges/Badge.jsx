@@ -20,7 +20,7 @@ export const Badge = ({
     )
 };
 
-Badge.prototype = {
+Badge.propTypes = {
     children: PropTypes.node.isRequired,
     variant: PropTypes.oneOf(options.variant),
     color: PropTypes.oneOf(options.colors)

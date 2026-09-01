@@ -26,6 +26,7 @@
     "@storybook/react-vite": "^10.5.10",
     "@vitest/browser-playwright": "latest",
     "@vitest/coverage-v8": "latest",
+    "eslint-plugin-storybook": "^10.5.10",
     "playwright": "latest",
     "prop-types": "latest",
     "storybook": "^10.5.10",
