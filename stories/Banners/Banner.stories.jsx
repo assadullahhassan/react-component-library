@@ -24,4 +24,21 @@ export default {
 
 const Template = (args) => <Banner {...args} />
 
+const ListTemplate = ({items, ...args}) => 
+    items.map((item, index) => 
+        <Banner key={index} {...args} {...item} />
+    )
+
 export const Default = Template.bind({});
+
+export const MultiLine = ListTemplate.bind({})
+MultiLine.args = {
+    items: options.colors.map((color) => ({ color })),
+    variant: 'multi-line',
+}
+
+export const SingleLine = ListTemplate.bind({})
+SingleLine.args = {
+    items: options.colors.map((color) => ({ color })),
+    variant: 'single-line',
+}
