@@ -2,7 +2,7 @@ import { Banner } from './Banner'
 import { options } from "./constants";
 
 export default {
-    title: 'Banner',
+    title: 'Components/Banner',
     component: Banner,
     args: {
         title: 'Congratulations',

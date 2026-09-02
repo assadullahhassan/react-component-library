@@ -3,7 +3,7 @@ import { Badge } from './Badge'
 import { options } from "./constants";
 
 export default {
-    title: 'Badge',
+    title: 'Components/Badge',
     component: Badge,
     args: {
       children: 'Badge',

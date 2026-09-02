@@ -37,9 +37,9 @@ export const Banner = ({
     <div className={classNames('alert', `${color}`)} role="alert">
         <div className={classNames('icon')}>{Icons[color]}</div>
         <div className={classNames('content')}>
-            {title && <p className={classNames('title')}>{title}</p>}
+            {title && <p className={classNames('title', color)}>{title}</p>}
             {description && variant === 'multi-line' && (
-                <p className={classNames('description')}>{description}</p>
+                <p className={classNames('description', color)}>{description}</p>
             )}
         </div>
      </div>

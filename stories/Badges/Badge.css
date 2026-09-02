@@ -5,8 +5,10 @@
   justify-content: center;
   flex-direction: row;
   font-family: inherit;
-  font-size: 1.975rem;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: medium;
+  width: 67px;
+  height: 24px;
   padding: 0.3rem 0.75rem;
   line-height: 1.25;
   transition: all 0.2s ease-in-out;
