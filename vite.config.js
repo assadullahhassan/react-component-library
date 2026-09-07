@@ -33,5 +33,8 @@ export default defineConfig({
         }
       }
     }]
-  }
+  },
+  optimizeDeps: {
+    include: ['classnames', 'prop-types'],
+  },
 });

@@ -9,17 +9,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build-lib": "rollup -c"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^6.1.1",
     "classnames": "^2.5.1",
-    "minireset.css": "^0.0.7",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "minireset.css": "^0.0.7"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.29.7",
     "@chromatic-com/storybook": "latest",
+    "@rollup/plugin-babel": "^7.1.0",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^16.0.3",
     "@storybook/addon-a11y": "^10.5.10",
     "@storybook/addon-docs": "^10.5.10",
     "@storybook/addon-vitest": "^10.5.10",
@@ -29,7 +32,16 @@
     "eslint-plugin-storybook": "^10.5.10",
     "playwright": "latest",
     "prop-types": "latest",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "rollup": "^2.80.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^10.5.10",
     "vitest": "latest"
+  },
+  "peerDependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   }
 }

@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
-import classNames from "classnames";
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { options } from "./constants";
 
 import "./Banner.css";
@@ -35,7 +35,7 @@ export const Banner = ({
 }) => {
     return (
     <div className={classNames('alert', `${color}`)} role="alert">
-        <div className={classNames('icon')}>{Icons[color]}</div>
+        <div className={classNames('icon', 'iconWrapper')}>{Icons[color]}</div>
         <div className={classNames('content')}>
             {title && <p className={classNames('title', color)}>{title}</p>}
             {description && variant === 'multi-line' && (

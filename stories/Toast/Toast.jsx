@@ -57,3 +57,6 @@ Toast.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
 };
+
+
+export default Toast;
