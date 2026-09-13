@@ -2,7 +2,7 @@
 
 > A modern, color-driven React component library featuring highly customizable badges, alerts, tooltips, popups, and card components.
 
-[![npm version](https://img.shields.io/badge/npm-v1.0.0-blue.svg)](https://npmjs.com)
+[![npm version](https://img.shields.io/badge/npm-v11.17.0-blue.svg)](https://npmjs.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-18.x-61dafb.svg)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.x-646cff.svg)](https://vitejs.dev/)
@@ -28,9 +28,7 @@
 
 - 🎨 **Rich Color Palettes:** Vibrant, accessible color variants for state feedback and UI highlights.
 - 📦 **Modular & Tree-Shakable:** Import only the components you need into your bundle.
-- ⚡ **Vite & CSS Modules:** Fast development build times with zero style leakage.
-- 📚 **Storybook Included:** Interactive component sandbox with real-time prop controls and visual documentation.
-- 🧪 **Fully Tested:** Unit tests powered by **Vitest** and **React Testing Library**.
+- ⚡ **Vite:** Fast development build times.
 
 ---
 
