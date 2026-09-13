@@ -1,4 +1,4 @@
 export const options = {
-    variant: ['multi-line', 'single-line'],
-    colors: ['success', 'warning', 'error', 'neutral']
+    variant: ['multiline', 'singleline'],
+    types: ['success', 'warning', 'error', 'neutral']
 }

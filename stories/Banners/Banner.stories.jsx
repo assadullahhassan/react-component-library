@@ -6,18 +6,18 @@ export default {
     component: Banner,
     args: {
         title: 'Congratulations',
-        variant: 'multi-line',
+        variant: 'multiline',
         description: 'You have successfully completed the task.',
-        color: 'success'
+        type: 'success'
     },
     argTypes: {
         variant: {
             control: { type: 'select'},
             options: options.variant
         },
-        color: {
+        type: {
             control: { type: 'select'},
-            options: options.colors 
+            options: options.types 
         }
     }
 }
@@ -33,12 +33,12 @@ export const Default = Template.bind({});
 
 export const MultiLine = ListTemplate.bind({})
 MultiLine.args = {
-    items: options.colors.map((color) => ({ color })),
-    variant: 'multi-line',
+    items: options.types.map((type) => ({ type })),
+    variant: 'multiline',
 }
 
 export const SingleLine = ListTemplate.bind({})
 SingleLine.args = {
-    items: options.colors.map((color) => ({ color })),
-    variant: 'single-line',
+    items: options.types.map((type) => ({ type })),
+    variant: 'singleline',
 }

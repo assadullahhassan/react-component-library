@@ -30,16 +30,16 @@ const Icons = {
 export const Banner = ({
     description,
     title,
-    variant = 'multi-line',
-    color = 'success'
+    variant = 'multiline',
+    type = 'success'
 }) => {
     return (
-    <div className={classNames('alert', `${color}`)} role="alert">
-        <div className={classNames('icon', 'iconWrapper')}>{Icons[color]}</div>
+    <div className={classNames('alert', `${type}`)} role="alert">
+        <div className={classNames('icon', 'iconWrapper')}>{Icons[type]}</div>
         <div className={classNames('content')}>
-            {title && <p className={classNames('title', color)}>{title}</p>}
-            {description && variant === 'multi-line' && (
-                <p className={classNames('description', color)}>{description}</p>
+            {title && <p className={classNames('title', type)}>{title}</p>}
+            {description && variant === 'multiline' && (
+                <p className={classNames('description', type)}>{description}</p>
             )}
         </div>
      </div>
@@ -50,7 +50,7 @@ Banner.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string,
     variant: PropTypes.oneOf(options.variant),
-    color: PropTypes.oneOf(options.colors)
+    type: PropTypes.oneOf(options.types)
 }
 
 export default Banner
