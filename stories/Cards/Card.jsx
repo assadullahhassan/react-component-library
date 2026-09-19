@@ -45,4 +45,3 @@ Card.propTypes = {
   isHovered: PropTypes.bool,
 };
 
-export default Card;

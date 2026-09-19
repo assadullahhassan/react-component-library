@@ -52,5 +52,3 @@ Banner.propTypes = {
     variant: PropTypes.oneOf(options.variant),
     type: PropTypes.oneOf(options.types)
 }
-
-export default Banner

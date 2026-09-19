@@ -4,7 +4,7 @@ import { options } from "./constants";
 
 import "./Badge.css";
 
-export const Badge = ({
+ export const Badge = ({
     children,
      variant = 'square',
      color = 'gray',
@@ -25,5 +25,3 @@ Badge.propTypes = {
     variant: PropTypes.oneOf(options.variant),
     color: PropTypes.oneOf(options.colors)
 }
-
-export default Badge

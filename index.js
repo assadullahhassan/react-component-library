@@ -1,5 +1,5 @@
-export * from './stories/Badges';
-export * from './stories/Banners';
-export * from './stories/Cards';
-export * from './stories/Toast';
-export * from './stories/Tooltip';
+export { Badge } from './stories/Badges';
+export { Banner } from './stories/Banners';
+export { Card } from './stories/Cards';
+export { Toast } from './stories/Toast';
+export { Tooltip } from './stories/Tooltip';

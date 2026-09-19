@@ -3,6 +3,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import external from 'rollup-plugin-peer-deps-external';
 import { terser } from 'rollup-plugin-terser';
+import packageJson from './package.json';
 // import pkg from './package.json';
 
 import postcss from 'rollup-plugin-postcss';
@@ -12,12 +13,12 @@ export default [
   input: 'index.js',
   output: [
     {
-      file: 'dist/index.cjs.js',
+      file: packageJson.main,
       format: 'cjs',
       sourcemap: true,
     },
     {
-      file: 'dist/index.esm.js',
+      file: packageJson.module,
       format: 'esm',
       sourcemap: true,
     }
@@ -26,7 +27,9 @@ export default [
   plugins: [
     external(),
     commonjs(),
-    resolve(),
+    resolve({
+      extensions: ['.js', '.jsx'],
+    }),
     postcss({
         plugins: [],
         minimize: true,

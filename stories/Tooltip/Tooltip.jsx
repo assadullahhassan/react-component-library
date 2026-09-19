@@ -47,5 +47,3 @@ Tooltip.propTypes = {
   onClose: PropTypes.func,
   className: PropTypes.string,
 };
-
-export default Tooltip;
