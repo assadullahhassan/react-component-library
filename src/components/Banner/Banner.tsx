@@ -1,6 +1,8 @@
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import { options } from "./constants";
+import {
+  forwardRef,
+  type HTMLAttributes,
+  type ReactNode,
+} from "react";
 
 import "./Banner.css";
 
@@ -27,28 +29,58 @@ const Icons = {
   ),
 };
 
-export const Banner = ({
-    description,
-    title,
-    variant = 'multiline',
-    type = 'success'
-}) => {
+export type BannerVariant =
+  | "singleline"
+  | "multiline";
+
+export type BannerType =
+  |'success' | 'warning' | 'error' | 'neutral';
+
+export interface BannerProps
+  extends HTMLAttributes<HTMLSpanElement> {
+  title: string;
+  variant?: BannerVariant;
+  type?: BannerType;
+  icon?: ReactNode;
+  children?: ReactNode;
+}
+
+export const Banner = forwardRef<HTMLSpanElement, BannerProps>(
+  function Banner(
+    {
+      title = "This is the default title",
+      variant = "singleline",
+      type = "success",
+      icon,
+      className,
+      children,
+      ...props
+    },
+    ref
+  ) {
+    const classes = [
+      "banner",
+      `banner-${variant}`,
+      `banner-${type}`,
+      className,
+    ]
+      .filter(Boolean)
+      .join(" ");
+
     return (
-    <div className={classNames('alert', `${type}`)} role="alert">
-        <div className={classNames('icon', 'iconWrapper')}>{Icons[type]}</div>
-        <div className={classNames('content')}>
-            {title && <p className={classNames('title', type)}>{title}</p>}
-            {description && variant === 'multiline' && (
-                <p className={classNames('description', type)}>{description}</p>
+    <div className={'banner ' + `banner-${type}`} role="alert">
+        <div className={'icon '+ 'iconWrapper'}>{Icons[type]}</div>
+        <div className={'content'}>
+            {title && <p className={'title ' + `banner-${type}`}>{title}</p>}
+            {variant === 'multiline' && (
+                <p className={'description ' + `banner-${type}`}>{children}</p>
             )}
         </div>
      </div>
-    )
-}
 
-Banner.propTypes = {
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string,
-    variant: PropTypes.oneOf(options.variant),
-    type: PropTypes.oneOf(options.types)
-}
+      
+    );
+  }
+);
+
+Banner.displayName = "Banner";

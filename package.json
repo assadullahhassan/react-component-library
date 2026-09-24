@@ -1,53 +1,65 @@
 {
   "name": "gamut-react-ui",
-  "version": "1.6.1",
-  "description": "A react component library",
-  "license": "ISC",
-  "author": "Assadullah Hassan",
-  "type": "commonjs",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
+  "version": "2.2.0",
+  "private": false,
+  "description": "A lightweight, accessible React component library built with TypeScript, Vite, and CSS.",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build-lib": "rollup -c"
-  },
-  "dependencies": {
-    "@babel/runtime": "^8.0.0",
-    "@vitejs/plugin-react": "^6.1.1",
-    "classnames": "^2.5.1",
-    "minireset.css": "^0.0.7"
-  },
-  "devDependencies": {
-    "@babel/preset-react": "^7.29.7",
-    "@chromatic-com/storybook": "latest",
-    "@rollup/plugin-babel": "^7.1.0",
-    "@rollup/plugin-commonjs": "^24.1.0",
-    "@rollup/plugin-node-resolve": "^16.0.3",
-    "@storybook/addon-a11y": "^10.5.10",
-    "@storybook/addon-docs": "^10.5.10",
-    "@storybook/addon-vitest": "^10.5.10",
-    "@storybook/react-vite": "^10.5.10",
-    "@vitest/browser-playwright": "latest",
-    "@vitest/coverage-v8": "latest",
-    "eslint-plugin-storybook": "^10.5.10",
-    "playwright": "latest",
-    "prop-types": "latest",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
-    "rollup": "^2.80.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-terser": "^7.0.2",
-    "storybook": "^10.5.10",
-    "vitest": "latest"
+    "check": "npm run typecheck && npm run lint && npm test && npm run build && npm run build-storybook"
   },
   "peerDependencies": {
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react": "^18.2.0 || ^19.0.0",
+    "react-dom": "^18.2.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^9.1.0",
+    "@storybook/addon-docs": "^9.1.0",
+    "@storybook/react-vite": "^9.1.0",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@typescript-eslint/eslint-plugin": "^8.70.1",
+    "@typescript-eslint/parser": "^8.70.1",
+    "@vitejs/plugin-react": "^5.0.2",
+    "eslint": "^9.39.5",
+    "eslint-plugin-react-hooks": "^6.1.1",
+    "jsdom": "^26.1.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.5",
+    "vitest": "^3.2.4"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./dist/index.css"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "engines": {
+    "node": ">=20"
   }
 }
