@@ -38,6 +38,7 @@
     "@typescript-eslint/eslint-plugin": "^8.70.1",
     "@typescript-eslint/parser": "^8.70.1",
     "@vitejs/plugin-react": "^5.0.2",
+    "chromatic": "^18.9.5",
     "eslint": "^9.39.5",
     "eslint-plugin-react-hooks": "^6.1.1",
     "jsdom": "^26.1.0",

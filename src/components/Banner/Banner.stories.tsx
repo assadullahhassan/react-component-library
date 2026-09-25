@@ -84,12 +84,11 @@ export const Variants: Story = {
         alignItems: "center",
       }}
     >
-      <Banner variant="singleline" type="success">
-        Singleline 
+      <Banner title="Notification" variant="singleline" type="success">
       </Banner>
 
-      <Banner variant="multiline" type="success">
-        Multiline
+      <Banner title="Notification" variant="multiline" type="success" >
+        Congratulations! Your settings have been saved.
       </Banner>
     </div>
   ),

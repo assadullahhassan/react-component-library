@@ -82,8 +82,9 @@ Display status indicators, tags, or counts.
 
 | Prop | Type | Default | Description |
 | --- | --- | --- | --- |
-| `variant` | `'neutral' \| 'info' \| 'success' \| 'warning' \|'danger' \| 'purple' \`| 'neutral' | Sets the variant. |
-| `size` | `'sm' \| 'md' \|'lg' \ `| 'md' | Badge sizes. |
+| `variant` | `'neutral' \| 'info' \| 'success' \| 'warning' \|'danger' \| 'purple'`| 'neutral' | Sets the variant. |
+| `size` | `'sm' \| 'md' \|'lg'`| 'md' | Badge sizes. |
+|`type` | `'pill' \| 'square' `| 'square' | The radius corner of a badge. |
 | `dot` | `boolean`| false | A dot inside the badge. |
 | `children` | `ReactNode` | *required* | The description text inside the badge. |
 | `className` | `string` | `''` | Optional custom CSS class. |
@@ -94,6 +95,9 @@ Display status indicators, tags, or counts.
 
  {/* Badge with dot*/}
  <Badge variant="success" dot>Online</Badge>
+
+ {/* pill badge*/}
+ <Badge variant="info" type="pill">I'm the pill badge</Badge>
 
  {/* Long Label */}
  <div style={{ width: 180 }}>

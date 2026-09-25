@@ -48,7 +48,7 @@ export interface BannerProps
 export const Banner = forwardRef<HTMLSpanElement, BannerProps>(
   function Banner(
     {
-      title = "This is the default title",
+      title = "Notification",
       variant = "singleline",
       type = "success",
       icon,
