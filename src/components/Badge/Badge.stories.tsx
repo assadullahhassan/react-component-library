@@ -31,7 +31,13 @@ const meta = {
         "lg",
       ],
     },
-
+    type: {
+      control: "inline-radio",
+      options: [
+        "square",
+        "pill",
+      ],
+    },
     dot: {
       control: "boolean",
     },
@@ -115,6 +121,26 @@ export const Sizes: Story = {
   ),
 };
 
+export const Types: Story = {
+  render: () => (
+    <div
+      style={{
+        display: "flex",
+        gap: 8,
+        alignItems: "center",
+      }}
+    >
+      <Badge type="square" variant="info">
+        Square
+      </Badge>
+
+      <Badge type="pill" variant="info">
+        Pill
+      </Badge>
+    </div>
+  ),
+};
+
 export const WithDot: Story = {
   args: {
     variant: "success",
@@ -126,7 +152,7 @@ export const WithDot: Story = {
 export const LongLabel: Story = {
   render: () => (
     <div style={{ width: 180 }}>
-      <Badge>
+      <Badge type="pill" variant="info">
         This is a very long badge label
       </Badge>
     </div>

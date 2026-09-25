@@ -82,22 +82,32 @@ Display status indicators, tags, or counts.
 
 | Prop | Type | Default | Description |
 | --- | --- | --- | --- |
-| `variant` | `'neutral' \| 'info' \`| `'success' \| 'warning' \`| `'danger' \| 'purple' \` | `'neutral'` | Sets the variant. |
-| `size` | `'sm' \| 'md' \|\| 'lg' \ `| 'md'` | Applies the size. |
+| `variant` | `'neutral' \| 'info' \| 'success' \| 'warning' \|'danger' \| 'purple' \`| 'neutral' | Sets the variant. |
+| `size` | `'sm' \| 'md' \|'lg' \ `| 'md' | Badge sizes. |
+| `dot` | `boolean`| false | A dot inside the badge. |
 | `children` | `ReactNode` | *required* | The description text inside the badge. |
 | `className` | `string` | `''` | Optional custom CSS class. |
 
 ```jsx
  <Badge variant="purple"> Purple</Badge>
  <Badge size="md"> Medium</Badge>
- <Badge size="lg">Large</Badge>
+
+ {/* Badge with dot*/}
+ <Badge variant="success" dot>Online</Badge>
+
+ {/* Long Label */}
+ <div style={{ width: 180 }}>
+      <Badge>
+        This is a very long badge label
+      </Badge>
+  </div>
 ```
 
 ---
 
 ### 2. Banner
 
-Inline banners for singleline notifications or detailed multiline message blocks.
+Inline banners for singleline or detailed multiline message blocks.
 
 #### Props
 
@@ -109,14 +119,13 @@ Inline banners for singleline notifications or detailed multiline message blocks
 | `children` | `ReactNode` | `undefined` | Message content or description body. |
 
 ```jsx
-// Single-line alert
-<Banner type="success" variant="singleline">
-  Congratulations!
+// Singleline banner
+<Banner title="Congratulations!" type="success">
 </Banner>
 
-// Multi-line alert
+// Multiline banner
 <Banner title="Attention" type="warning" variant="multiline">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  lorem ipsum dolor sit amet consectetur adipisicing elit.
 </Banner>
 ```
 

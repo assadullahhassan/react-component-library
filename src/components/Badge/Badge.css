@@ -24,7 +24,7 @@
   max-width: 100%;
 
   border: 1px solid var(--badge-border);
-  border-radius: 999px;
+  /* border-radius: 999px; */
 
   background: var(--badge-bg);
   color: var(--badge-fg);
@@ -49,6 +49,7 @@
 }
 
 .badge__dot {
+  margin-right: 0.45em;
   width: 0.45em;
   height: 0.45em;
   border-radius: 50%;
@@ -121,4 +122,12 @@
 .badge[aria-disabled="true"] {
   opacity: 0.55;
   cursor: not-allowed;
+}
+
+.type-square {
+    border-radius: 4px;
+}
+
+.type-pill {
+    border-radius: 999px;
 }

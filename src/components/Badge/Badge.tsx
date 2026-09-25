@@ -26,6 +26,7 @@ export interface BadgeProps
   dot?: boolean;
   icon?: ReactNode;
   children: ReactNode;
+  type?: "square" | "pill";
 }
 
 export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
@@ -34,6 +35,7 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
       variant = "neutral",
       size = "md",
       dot = false,
+      type = "square",
       icon,
       className,
       children,
@@ -45,6 +47,7 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
       "badge",
       `badge--${variant}`,
       `badge--${size}`,
+      `type-${type}`,
       className,
     ]
       .filter(Boolean)
